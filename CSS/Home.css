@@ -1,0 +1,104 @@
+.nev{
+    line-height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: auto;
+    margin: auto;
+}
+img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container > div{
+    padding: 2em;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+h1{
+    z-index: 2;
+}
+
+@media  screen and (max-width: 650px){
+    .flex-container{
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+
+h1:hover{
+    animation: swing 0.5s;
+}
+
+@keyframes swing{
+    15%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    45%{
+        transform: rotate(-4deg);
+    }
+    60%{
+        transform: rotate(4deg);
+    }
+    75%{
+        transform: rotate(-1deg);
+    }
+    90%{
+        transform: rotate(1deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+.takar{
+    background-color:white;
+    height: 3em;
+    animation: opac 2s forwards;
+    opacity: 0;
+}
+@keyframes opac{
+    0%{
+        transform: translateY(3em);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(3em);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        transform: translateY(0em);
+        z-index: 1;
+    }
+}
+
+.kep{
+    padding: 1em;
+    animation: slideIn 2s;
+}
+
+@keyframes slideIn {
+    0%{
+        z-index: 0;
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    100%{
+        z-index: 0;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
