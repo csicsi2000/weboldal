@@ -146,7 +146,7 @@ p{
 }
 
 
-@media  screen and (max-width: 800px){
+@media  screen and (max-width: 750px){
     
     .flex-container:nth-child(odd), .flex-container:nth-child(even){
         flex-direction: column;
@@ -190,5 +190,9 @@ p{
 
     .flex-container:nth-child(odd) > .kep{
         transform: none;
+    }
+
+    .elso, .harmadik{
+        display: none;
     }
 }
