@@ -11,7 +11,7 @@
         <div id="nav-placeholder"></div>
 
         <div class="flex-container-column"> 
-            <div class="flex-container normal">
+            <div class="flex-container">
                 <div class="kep">
                     <img src="../Images/Popper.jpg" width="100%">
                 </div>
@@ -21,9 +21,20 @@
                     </p>
                 </div>
             </div>
-            <div class="flex-container reverse">
+            <div class="flex-container">
                 <div class="kep">
-                    <img src="../Images/Amerika.jpg" width="100%">
+                        <div class="polaroid elso">
+                            <img src="../Images/Amerika.jpg" width="100%">
+                            <div class="caption">.</div>                        
+                        </div>
+                    <div class="polaroid masodik">
+                        <img src="../Images/amerikaGyak.jpg" width="100%">
+                        <div class="caption">.</div>
+                    </div>
+                    <div class="polaroid harmadik">
+                        <img src="../Images/amerikaKoncert.jpeg" width="100%">
+                        <div class="caption">.</div>
+                    </div>
                 </div>
                 <div class="text">
                     <p>
@@ -31,7 +42,7 @@
                     </p>
                 </div>
             </div>
-            <div class="flex-container normal">
+            <div class="flex-container">
                 <div class="kep">
                     <img src="../Images/zenekarNella.jpg" width="100%">
                 </div>
@@ -41,7 +52,7 @@
                     </p>
                 </div>
             </div>
-            <div class="flex-container reverse">
+            <div class="flex-container">
                 <div class="kep">
                     <img src="../Images/ora.jpg" width="100%">
                 </div>
@@ -51,7 +62,7 @@
                     </p>
                 </div>
             </div>
-            <div class="flex-container normal">
+            <div class="flex-container">
                 <div class="kep">
                     <img src="../Images/Tanitas.jpg" width="100%">
                 </div>
@@ -78,6 +89,22 @@
             {
               $("#nav-placeholder").load("Navbar.html");
             });
+
+            /*
+            if (matchMedia) {
+                var mq = window.matchMedia("(min-width: 900px)");
+                mq.addListener(WidthChange);
+                WidthChange(mq);
+            }
+            function WidthChange(mq) {
+
+                if (mq.matches) {
+                    document.querySelector("table").classList.add("table-header-rotated");
+                }
+                else {
+                    document.querySelector("table").classList.remove("table-header-rotated");
+                }
+            }*/
         </script>
     </body>
 </html>

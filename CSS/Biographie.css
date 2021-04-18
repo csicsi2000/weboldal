@@ -1,13 +1,6 @@
-img:hover{
-    position: relative;
-    transform: scale(1.1);
-    transition: 0.5s ;
+*{
+    box-sizing: border-box;
 }
-img{
-    position: none;
-    transition: 0.5s;
-}
-
 
 p{
     margin-top: 1em;
@@ -19,6 +12,7 @@ p{
 .flex-container-column{
     display: flex;
     flex-direction: column;
+    z-index: 0;
 }
 .flex-container{
     margin: 1em 5em;
@@ -27,8 +21,7 @@ p{
     width: 80%;
     z-index: 0;
 }
-
-.reverse{
+.flex-container:nth-child(even){
     flex-direction: row-reverse;
 }
 
@@ -39,7 +32,7 @@ p{
     padding: auto;
 }
 
-.normal > .kep, .reverse > .text{
+.flex-container:nth-child(odd) > .kep, .flex-container:nth-child(even) > .text{
     animation: slideInKepLeft 2s ;
     z-index: 0;
 }
@@ -55,7 +48,7 @@ p{
         transform: translateX(0%);
     }
 }
-.reverse > .kep , .normal > .text{
+.flex-container:nth-child(even) > .kep ,.flex-container:nth-child(odd) > .text{
     animation: slideInKepRight 2s ;
     z-index: 0;
 }
@@ -88,14 +81,99 @@ p{
     }
 }
 
-@media  screen and (max-width: 1000px){
-    .flex-container{
-        flex-direction: column;
-        margin: auto;
+.seged{
+    width: 20vw;
+    min-height: 19vw;
+}
+
+.kep{
+    position: relative;
+}
+.polaroid {
+    position: absolute;
+    grid-column: 1/1;
+    width: 25vw;
+    background: #fff;
+    padding: 3%;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    top: 0px
+}
+
+/*
+.kep > .polaroid:nth-child(1){
+}
+*/
+.elso{
+    transform: rotate(-10deg);
+}
+.masodik{
+    left: 30%;
+}
+
+.harmadik{
+    transform: rotate(10deg);
+    left: 60%;
+}
+.polaroid > img{
+    max-width: 100%;
+    height: auto;
+}
+.polaroid:hover{
+    transition: 0.3s;
+    z-index: 5;
+    transform: scale(1.2) rotate(0deg);
+    /*animation: moveForward 0.3s forwards;*/
+}
+
+@keyframes moveForward {
+    0%{
+
     }
+    
+    100%{
+        z-index: 5;
+        transform: translateY(0%) scale(1.3) rotate(0deg);
+    }
+}
+
+.caption {
+    font-size: 1em;
+    text-align: center;
+    height: 3%;
+    min-height: 3%;
+    color: white;
+}
+.kep {
+    width: 50%;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+
+@media  screen and (max-width: 700px){
+    .flex-container:nth-child(odd), .flex-container:nth-child(even){
+        flex-direction: column;
+        
+    }
+    .flex-container-column{
+        justify-content: center;
+    }
+
+    .polaroid{
+        width: 40%;
+        padding: 2%;
+    }
+
 
     .flex-container > div{
-        flex-basis: 10%;
+        flex-basis: 100%;
+        margin: 0;
+        padding: 0;
     }
 
+    .kep{
+        width: 100%;
+        min-height: 40vw;
+    }
 }
