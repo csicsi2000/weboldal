@@ -174,18 +174,26 @@ p{
     }
     
     .kep{
-        width: 100%;
+
+        width: 90%;
         min-height: 40vw;
         position: static;
         margin: auto;
-        display: block;
+        display: inline;
     }
     .polaroid > img{
         max-height: 50vh;
     }
 
     p{
-        line-height: 1.3em;
+        line-height: 1.5rem;
+        font-size: 1.1rem;
+        margin: 0px;
+    }
+
+    .flex-container{
+        justify-content: center;
+        margin: auto;
     }
 
     .flex-container:nth-child(odd) > .kep{
@@ -195,4 +203,5 @@ p{
     .elso, .harmadik{
         display: none;
     }
+
 }
