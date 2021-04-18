@@ -13,9 +13,6 @@ body{
     margin: 0px;
 }
 
-img{
-    z-index: 0;
-}
 .nav{
     display: flex;
     flex-direction: row;
@@ -32,7 +29,8 @@ header{
 
 nav{
     background-color: var(--background);
-    max-height: 2rem;
+    max-height: 5vh;
+    height: 5vw;
     width: 100%;
     z-index: 10;
 }
@@ -50,7 +48,7 @@ nav{
     width: 30%;
     display: flex;
     flex-direction: row;
-    font-size: 12px;
+    font-size: inherit;
     font-family: 'Open Sans', sans-serif;
 }
 .navigations > li > a{
@@ -63,17 +61,20 @@ nav{
     font-size: 1.15em;
     transition: 0.3s linear;
 }
+.navigations >li{
+    padding-right: 2.5vw;
+}
 .inline > li{
     display: inline-block;
-    padding: auto 2em;
     text-decoration: none;
+    padding: auto;
 }
 /* icons */
 .icon{
     height: 1em;
     width: 1em;
     background-size: cover;
-    margin: 0.9em;
+    margin-right: 2em;
 }
 
 #instagram{
@@ -141,14 +142,14 @@ img{
     }
 
     nav{
-        max-height: none;
-        height: 1.5vh;
+        min-height: 2em;
+        max-height: 6vh;
     }
     .navigations{
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 10vh;
+        top: 6vh;
         background-color:   #ffebb9;
         opacity: 0;
         flex-direction: column;
@@ -156,7 +157,7 @@ img{
         width: 100%;
         transform: translateX(100%);
         transition: 0.5s ease-in;
-        z-index: 999;
+        z-index: 10;
     }
 
     .navigations > li{
@@ -171,8 +172,8 @@ img{
         height: 10vh;
     }
     .icon{
-        height: 2em;
-        width: 2em;
+        height:4.4vw;
+        width: 4.4vw;
     }
     .burger{
         display: block;
