@@ -8,11 +8,18 @@ img{
     transition: 0.5s;
 }
 
-.biography > p{
+
+p{
     margin-top: 1em;
+    margin-bottom: 1em;
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.3em;
 }
 
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
 .flex-container{
     margin: 1em 5em;
     display: flex;
@@ -21,21 +28,23 @@ img{
     z-index: 0;
 }
 
+.reverse{
+    flex-direction: row-reverse;
+}
+
 .flex-container > div{
     flex-basis: 50%;
     margin: 2em;
     align-items: center;
     padding: auto;
 }
-.second{
-    margin-top: 2em;
-}
-.kep{
-    animation: slideInKep 2s ;
+
+.normal > .kep, .reverse > .text{
+    animation: slideInKepLeft 2s ;
     z-index: 0;
 }
 
-@keyframes slideInKep {
+@keyframes slideInKepLeft {
     0%{ z-index: 0;
         transform: translateX(-30%);
         opacity: 0;
@@ -43,9 +52,26 @@ img{
     100%{
         z-index: 0;
         opacity: 1;
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
+.reverse > .kep , .normal > .text{
+    animation: slideInKepRight 2s ;
+    z-index: 0;
+}
+
+@keyframes slideInKepRight {
+    0%{ z-index: 0;
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    100%{
+        z-index: 0;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 .biography{
     animation: slideIn 2s;
 }
@@ -69,7 +95,6 @@ img{
     }
 
     .flex-container > div{
-
         flex-basis: 10%;
     }
 

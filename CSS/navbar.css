@@ -60,7 +60,7 @@ nav{
 .navigations > li > a:hover{
     position: relative;
     color: #ff3c3c;
-    font-size: 1.1em;
+    font-size: 1.15em;
     transition: 0.3s linear;
 }
 .inline > li{
