@@ -209,13 +209,14 @@ p{
         justify-content: center;
         margin: auto;
         width: 95%;
+        min-height:1px;
     }
 
     .flex-container:nth-child(odd) > .kep{
         transform: none;
     }
 
-    .elso, .harmadik{
+    .kep{
         display: none;
     }
 

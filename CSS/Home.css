@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
 
 .nev{
     line-height: auto;
     text-align: center;
-    padding-top: 60vh;
+    padding-top: 70vh;
 }
 
 .container{
@@ -38,10 +37,10 @@
 }
 
 .felirat{
-    color:    #fde3a0;
+    color:    #fff5db;
     vertical-align: middle;
     z-index: 2;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Damion', cursive;
     max-width: inherit;
     font-size: 5rem;
     transition: 0.3s;
@@ -65,15 +64,10 @@
     }
 
     .felirat{
-        font-size: 18vw;
+        font-size: 4rem;
     }
 }
 
 /* Animations */
 
-.felirat:hover{
-    transition: 0.3s;
-    transform: scale(1.05);
-    filter: hue-rotate(-30deg);
-}
 
