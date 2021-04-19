@@ -146,13 +146,16 @@ p{
 }
 
 
-@media  screen and (max-width: 750px){
+@media  screen and (max-width: 1050px){
     
     .flex-container:nth-child(odd), .flex-container:nth-child(even){
         flex-direction: column;
     }
     .flex-container-column{
         justify-content: center;
+    }
+    .caption{
+        display: none;
     }
     
     .polaroid{
@@ -186,14 +189,15 @@ p{
     }
 
     p{
-        line-height: 1.5rem;
-        font-size: 1.1rem;
+        line-height: 3vh;
+        font-size: 2.3vh;
         margin: 0px;
     }
 
     .flex-container{
         justify-content: center;
         margin: auto;
+        width: 95%;
     }
 
     .flex-container:nth-child(odd) > .kep{

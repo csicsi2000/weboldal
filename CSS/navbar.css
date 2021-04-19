@@ -11,6 +11,7 @@
 }
 html, body {
     overflow-x: hidden;
+    min-height: 100vh;
 }
 body {
     position: relative
@@ -139,7 +140,7 @@ img{
     }
 }
 
-@media  screen and (max-width: 800px){
+@media  screen and (max-width: 1050px){
     body{
         overflow-x: hidden;
     }
@@ -154,7 +155,7 @@ img{
     .navigations{
         position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 100vh;
         top: 6vh;
         background-color:   #ffebb9;
         opacity: 0;
@@ -164,6 +165,7 @@ img{
         transform: translateX(100%);
         transition: 0.5s ease-in;
         z-index: 10;
+        justify-content: center;
     }
 
     .navigations > li{
@@ -172,6 +174,7 @@ img{
         line-height: 1em;
         margin: 0px;
         padding: 0px;
+        margin-bottom: 10vh;
     }
    
     nav{
