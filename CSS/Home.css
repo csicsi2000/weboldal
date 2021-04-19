@@ -2,17 +2,18 @@
 
 .nev{
     line-height: auto;
-    text-align: center;
-    padding-top: 70vh;
+    text-align: right;
+    padding-top: 4rem;
+    padding-right: 15vw;
 }
 
 .container{
     position: static;
     text-align: center;
     height: 100vh;
-    max-width: 80vh;
-    background-image: url(../Images/falMelletti.jpg);
-    background-position: top left;
+    max-width: 100%;
+    background-image: url(../Images/uloFeher.jpg);
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: auto;
@@ -42,17 +43,34 @@
     z-index: 2;
     font-family: 'Damion', cursive;
     max-width: inherit;
-    font-size: 5rem;
+    font-size: 4rem;
     transition: 0.3s;
 }
+
 @media screen and (max-width: 1000px) and (orientation: landscape){
     .felirat{
         font-size: 3rem;
+    }
+
+    .nev{
+        padding-right: 7rem;
+
     }
 }
 @media screen and (max-width: 1050px) and (orientation: portrait){
     .felirat{
         font-size: 8rem;
+    }
+
+    .container{
+        background-image: url(../Images/falMelletti.jpg);
+        background-position: top left;
+    }
+
+    .nev{
+        line-height: auto;
+        text-align: center;
+        padding-top: 70vh;
     }
 }
 
