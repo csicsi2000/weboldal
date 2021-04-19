@@ -8,12 +8,23 @@
     text-align: center;
     height: 100%;
 }
+
 img{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    object-fit: contain;
+    max-width:100%;
+    max-height:100%;
 }
-img:hover{
+.kep{
+    width: 90%;
+    margin: auto;
+    padding: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
-    z-index: 3;    
+}
+.kep:hover{
+    transform: scale(1.04);
+    box-shadow: 0 0 20px 1px black;
+    transition: 0.3s;
 }
 
 .flex-container{
@@ -27,6 +38,22 @@ img:hover{
     text-align: center;
     width: 50%;
     justify-content: center;
+    padding: 1em;
+    vertical-align: middle;
+    animation: slideIn 2s;
+}
+
+@keyframes slideIn {
+    0%{
+        z-index: 0;
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100%{
+        z-index: 0;
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 h1{
@@ -56,7 +83,7 @@ h1{
 /* Animations */
 
 h1:hover{
-    animation: swing 0.5s ;
+    animation: swing 0.4s ;
 }
 
 @keyframes swing{
@@ -82,11 +109,11 @@ h1:hover{
         transform: rotate(0deg);
     }
 
-}
+} 
+
 .takar{
     background-color:white;
     height: 10rem;
-    width: 100vw;
     animation: opac 2s forwards;
 }
 @keyframes opac{
@@ -101,27 +128,9 @@ h1:hover{
     100%{
         height: 0px;
         opacity: 0;
-        display: absolute;
+        display: none;
         transform: translateY(0em);
         z-index: 1;
     }
 }
 
-.kep{
-    padding: 1em;
-    vertical-align: middle;
-    animation: slideIn 2s;
-}
-
-@keyframes slideIn {
-    0%{
-        z-index: 0;
-        opacity: 0;
-        transform: translateY(30%);
-    }
-    100%{
-        z-index: 0;
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}

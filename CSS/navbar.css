@@ -72,6 +72,7 @@ header{
     text-decoration: none;
     padding: auto;
     font-size: 1rem;
+    margin: auto;
 }
 /* icons */
 .icon{
@@ -84,7 +85,7 @@ header{
 #instagram{
     background-image: url(../Images/instagram.svg);
     transition: 0.2s linear;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-right: 2rem;
 }
 
@@ -128,11 +129,13 @@ nav {
     opacity: 0;
     transform: translateY(-40%);
     background-color: var(--background);
-    max-height: 5vh;
+    max-height: 7vh;
     height: 5rem;
     width: 100%;
     z-index: 10;
     animation: slideInNav 0.5s forwards;
+    vertical-align: middle;
+    justify-content: center;
 }
 
 @keyframes slideInNav {
