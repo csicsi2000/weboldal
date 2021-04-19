@@ -33,6 +33,7 @@ body {
     vertical-align: middle;
     margin: auto;
     max-height: inherit;
+    min-height: inherit;
 }
 header{
     display: block;
@@ -43,6 +44,7 @@ header{
     flex-basis: 30%;
     list-style: none;
     min-width: 160px;
+    min-height: 22px;
 }
 
 .navigations{
@@ -77,8 +79,8 @@ header{
 }
 /* icons */
 .icon{
-    height: 3vh;
-    width: 3vh;
+    height: 2rem;
+    width: 2rem;
     background-size: cover;
     
 }
@@ -137,6 +139,7 @@ nav {
     animation: slideInNav 0.5s forwards;
     vertical-align: middle;
     justify-content: center;
+    min-height: 40px;
 }
 
 @keyframes slideInNav {
@@ -145,7 +148,7 @@ nav {
         transform: none;
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 1001px){
     .inline > li{
         font-size: 1.2rem;
     }
@@ -154,15 +157,23 @@ nav {
     }
 }
 
-@media  screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) and (orientation: landscape){
+    nav{
+        height: 3rem;
+        max-height: 3rem;
+    }
+    .navigations{
+        top: 10vh;
+    }
+    .nav{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1000px) and (orientation: portrait){
     body{
         overflow-x: hidden;
     }
     
-    nav{
-        min-height: 2em;
-        max-height: 6vh;
-    }
     .navigations{
         position: absolute;
         right: 0px;
@@ -189,11 +200,17 @@ nav {
     }
    
     nav{
-        height: 10vh;
+        height: 6vh;
+    }
+    .nav{
+        width: 90%;
+
     }
     .icon{
         width:  4vh;
         height: 4vh; 
+        min-width: 22px;
+        min-height: 22px;
     }
     .burger{
         display: block;
@@ -221,4 +238,7 @@ nav {
         width: 30px;
         transition: 0.3s linear;
     } 
+    @media screen {
+        
+    }
 }
