@@ -129,7 +129,7 @@ nav {
     transform: translateY(-40%);
     background-color: var(--background);
     max-height: 5vh;
-    height: 5vw;
+    height: 5rem;
     width: 100%;
     z-index: 10;
     animation: slideInNav 0.5s forwards;
@@ -143,7 +143,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
     .inline > li{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .nav{
         width: 90%;
