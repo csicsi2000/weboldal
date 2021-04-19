@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+
 .nev{
     line-height: auto;
     text-align: center;
     width: 100%;
-    padding-top: 50vh;
+    top: 75%;
+    z-index: 0;
 }
 
 img{
@@ -19,11 +21,7 @@ img{
     transition: 0.3s;
 }
 .container{
-    position: static;
-    background-image: url(../Images/falMelletti.jpg);
-    background-position: right;
-    background-size: cover ;
-    min-height: 100vh;
+    position: relative;
 }
 .container > div{
     padding: auto;
@@ -42,17 +40,21 @@ img{
         transform: translateX(0%);
     }
 }
-
+/*
 .felirat{
+    position: relative;
     color:   #ffebb9;
     vertical-align: middle;
     padding: auto;
+    margin: auto;
+    z-index: 2;
     font-family: 'Great Vibes', cursive;
     font-size: 15vw;
 }
-
+*/
 @media  screen and (max-width: 1050px){
     
+
     .container{
         padding: 0px;
         margin-top: 0px;
@@ -69,11 +71,11 @@ img{
 }
 
 /* Animations */
-/*
+
 h1:hover{
     animation: swing 0.4s ;
 }
-*/
+
 @keyframes swing{
     15%{
         transform: rotate(-10deg);
