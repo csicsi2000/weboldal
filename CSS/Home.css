@@ -53,12 +53,18 @@
     }
 
     .nev{
-        padding-right: 7rem;
-
+        padding-right: 10vw;
+        padding-top: 10vh;
+    }
+}
+@media screen and (max-width: 600px) and (orientation: landscape){
+    .nev{
+        padding-right: 5vw;
     }
 }
 @media screen and (max-width: 1050px) and (orientation: portrait){
     .felirat{
+        text-align: center;
         font-size: 8rem;
     }
 
@@ -68,9 +74,9 @@
     }
 
     .nev{
-        line-height: auto;
         text-align: center;
         padding-top: 70vh;
+        padding-right: 0px;
     }
 }
 
@@ -85,6 +91,13 @@
         font-size: 4rem;
     }
 }
+
+@media  screen and (max-width: 400px) and (orientation: portrait){
+    .felirat{
+        font-size: 3rem;
+    }
+}
+
 
 /* Animations */
 
