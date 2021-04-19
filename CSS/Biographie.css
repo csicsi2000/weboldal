@@ -3,10 +3,10 @@
 }
 
 p{
-    margin: 3vh;
+    margin: 1rem;
     font-family: 'Open Sans', sans-serif;
-    line-height: 3vh;
-    font-size: 2.5vh;
+    line-height: 1.3rem;
+    font-size: 1rem;
 }
 
 .flex-container-column{
@@ -147,10 +147,18 @@ p{
 .text{
     line-height: 100%;
 }
+@media screen and (max-width: 1200px) and (orientation: landscape){
+    .kep{
+        text-align: center;
+    }
+    .polaroid > img{
+        width: 60%;
+    }
+}
 
 
 @media  screen and (max-width: 1200px){
-    
+
     .flex-container:nth-child(odd), .flex-container:nth-child(even){
         flex-direction: column;
     }
@@ -175,7 +183,9 @@ p{
 
     .flex-container > div{
         flex-basis: 100%;
-        padding: 0;
+        margin: auto;
+        margin-top: 1rem;
+        justify-content: center;
     }
     
     .kep{
@@ -183,12 +193,16 @@ p{
         position: static;
         margin: auto;
         display: inline;
+        align-items: center;
+
     }
     
     p{
+        width: 90%;
         line-height: 1.5rem;
         font-size: 1.2rem;
-        margin: 0px;
+        margin: auto;
+        padding: auto;
     }
 
     .flex-container{

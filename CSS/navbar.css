@@ -43,7 +43,7 @@ header{
     position: relative;
     flex-basis: 30%;
     list-style: none;
-    min-width: 160px;
+    min-width: 100px;
     min-height: 22px;
 }
 
@@ -82,7 +82,6 @@ header{
     height: 2rem;
     width: 2rem;
     background-size: cover;
-    
 }
 
 #instagram{
@@ -168,8 +167,24 @@ nav {
     .nav{
         width: 90%;
     }
+    .icons{
+        flex-basis: 20%;
+    }
 }
-@media screen and (max-width: 1000px) and (orientation: portrait){
+@media screen and (max-width: 800px) and (orientation: landscape){
+    .nav{
+        width: 100%;
+    }
+
+    #instagram{
+        margin-right: 0.5rem;
+    }
+
+    .navigations{
+        transform: translateX(5%);
+    }
+}
+@media screen and (max-width: 1300px) and (orientation: portrait){
     body{
         overflow-x: hidden;
     }
@@ -205,6 +220,9 @@ nav {
     .nav{
         width: 90%;
 
+    }
+    .icons{
+        flex-basis: 50%;
     }
     .icon{
         width:  4vh;
