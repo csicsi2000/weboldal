@@ -17,6 +17,11 @@ body {
     position: relative
 }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
 
 .nav{
     display: flex;
@@ -30,14 +35,6 @@ body {
 }
 header{
     display: block;
-}
-
-nav{
-    background-color: var(--background);
-    max-height: 5vh;
-    height: 5vw;
-    width: 100%;
-    z-index: 10;
 }
 
 .icons{
@@ -126,17 +123,21 @@ a{
 img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.nav {
+nav {
     opacity: 0;
     transform: translateY(-40%);
+    background-color: var(--background);
+    max-height: 5vh;
+    height: 5vw;
+    width: 100%;
+    z-index: 10;
     animation: slideInNav 0.5s forwards;
 }
 
 @keyframes slideInNav {
     100%{
         opacity: 1;
-        transform: translateY(0%) translateX(0%);
-
+        transform: none;
     }
 }
 

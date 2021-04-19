@@ -29,7 +29,7 @@ h1{
     z-index: 2;
 }
 
-@media  screen and (max-width: 650px){
+@media  screen and (max-width: 1050px){
     .flex-container{
         flex-direction: column;
     }
@@ -38,7 +38,7 @@ h1{
 /* Animations */
 
 h1:hover{
-    animation: swing 0.5s;
+    animation: swing 0.5s ;
 }
 
 @keyframes swing{
@@ -69,19 +69,15 @@ h1:hover{
     background-color:white;
     height: 3em;
     animation: opac 2s forwards;
-    opacity: 0;
 }
 @keyframes opac{
     0%{
         transform: translateY(3em);
-        opacity: 1;
     }
     40% {
         transform: translateY(3em);
-        opacity: 1;
     }
     100%{
-        opacity: 0;
         display: none;
         transform: translateY(0em);
         z-index: 1;
