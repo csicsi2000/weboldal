@@ -1,0 +1,10 @@
+form{
+    padding: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 300rem;
+}
+
+input[text]{
+    width: 50%;
+}

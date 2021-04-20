@@ -15,7 +15,14 @@ html {
 body {
     position: relative;
     min-height: 100vh;
+}
 
+img{
+    alt: "Pic";
+}
+
+.afterNav{
+    margin-top: 3.5rem;
 }
 
 .js-loading *,
@@ -158,6 +165,11 @@ img{
     .navMiddle{
         width: 90%;
     }
+
+
+    #instagram{
+        margin-right: 5vw;
+    }
 }
 
 @media screen and (max-width: 1000px) and (orientation: landscape){
@@ -272,4 +284,7 @@ img{
         width: 30px;
         transition: 0.3s linear;
     } 
+    #instagram{
+        margin-right: 5vw;
+    }
 }
