@@ -24,7 +24,7 @@ body {
   animation-play-state: paused !important;
 }
 
-.nav{
+.navMiddle{
     display: flex;
     flex-direction: row;
     width: 70vw;
@@ -65,7 +65,7 @@ header{
     position: relative;
     color: #ff3c3c;
     font-size: 1.15em;
-    transition: 0.3s linear;
+    transition: 0.2s linear;
 }
 .navigations >li{
     padding-right: 2.5vw;
@@ -118,7 +118,7 @@ a{
 }
 
 .burger {
-    position: absolute;
+    position: fixed;
     right: 3vh;
     align-items: right;
     cursor: pointer;
@@ -127,11 +127,13 @@ a{
 img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-nav {
+#navbar {
+    position: fixed;
     opacity: 0;
     transform: translateY(-40%);
     background-color: var(--background);
-    max-height: 7vh;
+    max-height: 55px;   
+    max-width: 100vw; 
     height: 5rem;
     width: 100%;
     z-index: 10;
@@ -139,6 +141,8 @@ nav {
     vertical-align: middle;
     justify-content: center;
     min-height: 40px;
+    transition: 0.3s;
+    top: 0px;
 }
 
 @keyframes slideInNav {
@@ -151,37 +155,49 @@ nav {
     .inline > li{
         font-size: 1.2rem;
     }
-    .nav{
+    .navMiddle{
         width: 90%;
     }
 }
 
 @media screen and (max-width: 1000px) and (orientation: landscape){
-    nav{
+    #navbar{
         height: 3rem;
         max-height: 3rem;
+        width: 100%;
     }
     .navigations{
-        top: 10vh;
+        width: 100%;
     }
-    .nav{
-        width: 90%;
+    .navMiddle{
+        width: 100%;
     }
     .icons{
         flex-basis: 20%;
     }
 }
 @media screen and (max-width: 800px) and (orientation: landscape){
-    .nav{
-        width: 100%;
+    .navMiddle{
+        width: 100vw;
+    }
+
+    .icon{
+        margin-left: 1rem;
     }
 
     #instagram{
-        margin-right: 0.5rem;
+        margin: 0;
+        margin-left: 1rem;
     }
 
     .navigations{
         transform: translateX(5%);
+        width: 50%;
+    }
+
+    #navbar{
+        opacity: 1;
+        justify-content: flex-start;
     }
 }
 @media screen and (max-width: 1300px) and (orientation: portrait){
@@ -190,7 +206,7 @@ nav {
     }
     
     .navigations{
-        position: absolute;
+        position: fixed;
         right: 0px;
         height: 100vh;
         top: 6vh;
@@ -214,10 +230,10 @@ nav {
         margin-bottom: 10vh;
     }
    
-    nav{
+    #navbar{
         height: 6vh;
     }
-    .nav{
+    .navMiddle{
         width: 90%;
 
     }
@@ -225,8 +241,8 @@ nav {
         flex-basis: 50%;
     }
     .icon{
-        width:  4vh;
-        height: 4vh; 
+        width:  2rem;
+        height: 2rem; 
         min-width: 22px;
         min-height: 22px;
     }
@@ -234,29 +250,26 @@ nav {
         display: block;
     }
     
-    .nav-toggle:checked ~ .navigations{
+    #toggle:checked ~ .navigations{
         opacity: 0.92;
         transform: translateX(0%);
         
     }
 
-    .nav-toggle:checked ~ .burger > .line1{
+    #toggle:checked ~ .burger > .line1{
         transform:   rotate(45deg) translate(5px, 6px);
         width: 30px;
         transition: 0.3s linear;
     } 
-    .nav-toggle:checked ~ .burger > .line2{
+    #toggle:checked ~ .burger > .line2{
         width: 0px;
         transition: 0.3s linear;
         opacity: 0;
 
     } 
-    .nav-toggle:checked ~ .burger > .line3{
+    #toggle:checked ~ .burger > .line3{
         transform:   rotate(-45deg) translate(5px, -6px);
         width: 30px;
         transition: 0.3s linear;
     } 
-    @media screen {
-        
-    }
 }

@@ -5,8 +5,8 @@
 p{
     margin: 2rem;
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.5rem;
-    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .flex-container-column{
@@ -22,6 +22,10 @@ p{
     min-height: 40vh;
     
 }
+.first-container{
+    margin-top: 5rem;
+}
+
 .flex-container:nth-child(even){
     flex-direction: row-reverse;
 }
@@ -34,7 +38,7 @@ p{
 }
 
 .flex-container:nth-child(odd) > *{
-    animation: slideInKepLeft 2s ;
+    animation: slideInKepLeft 1s ;
 }
 
 @keyframes slideInKepLeft {
@@ -50,7 +54,7 @@ p{
     transform: translateX(-10%);
 }
 .flex-container:nth-child(even) > * {
-    animation: slideInKepRight 2s ;
+    animation: slideInKepRight 1.5s ;
 }
 
 @keyframes slideInKepRight {
@@ -66,7 +70,7 @@ p{
 }
 
 .biography{
-    animation: slideIn 2s;
+    animation: slideIn 1.5s;
 }
 
 @keyframes slideIn {
@@ -164,6 +168,7 @@ p{
     }
     .flex-container-column{
         justify-content: center;
+        margin-top: 3.5rem;
     }
     .caption{
         display: none;
