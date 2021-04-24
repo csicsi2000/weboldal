@@ -1,0 +1,19 @@
+.afterNav{
+    text-align: center;
+}
+
+.studio{
+    width: 90%;
+    margin: auto;
+}
+
+.flex-container{
+    display: flew;
+    flex-wrap: wrap;
+}
+
+.pictures{
+    height: 15rem;
+    width: 15rem;
+}
+
