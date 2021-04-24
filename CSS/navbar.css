@@ -22,7 +22,7 @@ img{
 }
 
 .afterNav{
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 }
 
 .js-loading *,
@@ -178,6 +178,10 @@ img{
         max-height: 3rem;
         width: 100%;
     }
+
+    .afterNav{
+        margin-top: 3rem;
+    }
     .navigations{
         width: 100%;
     }
@@ -222,7 +226,7 @@ img{
         right: 0px;
         height: 100vh;
         top: 6vh;
-        background-color:   #ffebb9;
+        background-color:   #ffe195;
         opacity: 0;
         flex-direction: column;
         align-items: center;
@@ -231,6 +235,10 @@ img{
         transition: 0.5s ease-in;
         z-index: 10;
         justify-content: center;
+    }
+
+    .afterNav{
+        margin-top: 6vh;
     }
 
     .navigations > li{
@@ -244,6 +252,7 @@ img{
    
     #navbar{
         height: 6vh;
+        max-height: 6vh;
     }
     .navMiddle{
         width: 90%;
