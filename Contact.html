@@ -28,40 +28,36 @@
 
             <div class="contact-form">  
                 <h2>CONTACT ME</h2>
-                
-                
-                <form name="form1" action="php/contact.php" method="POST">
+            
+                <form name="form1" action="https://formsubmit.co/hamhamjottform@outlook.com" method="POST">
                     <div class="flexbox">
                         <div class="inputdiv">
-                            <input type="text"  name="firstname" value="" class="oneline" required>
+                            <input type="text"  name="firstname" value="" class="oneline field" placeholder="hold" required>
                             <label for="firstname" class="label-name"><span class="content">First Name</span></label>    
                         </div>  
                         <div class="space"></div>
                         <div class="inputdiv">
-                            <input type="text"  name="lastname" value="" class="oneline" required>
-                            <label for="firstname" class="label-name"><span class="content">Last Name</span></label>    
+                            <input type="text"  name="lastname" value="" class="oneline field" placeholder="hold" required>
+                            <label for="lastname" class="label-name"><span class="content">Last Name</span></label>    
                         </div> 
                     </div>
                     <div class="inputdiv">
-                        <input type="text" name="email" value="" required><p><?php echo $emailErr; ?></p>
-                        <label for="firstname" class="label-name"><span class="content">Email Adress</span></label>    
+                        <input type="email" name="email" value="" class="field" placeholder="hold" required>
+                        <label for="email" class="label-name"><span class="content">Email Adress</span></label>    
                     </div>
                     <div class="inputdiv">
-                        <input type="text" name="subject" value="" required>
-                        <label for="firstname" class="label-name"><span class="content">Subject</span></label>    
+                        <input type="text" name="subject" value=""  class="field" placeholder="hold" required>
+                        <label for="subject" class="label-name"><span class="content">Subject</span></label>    
                     </div>
                     <div class="inputdiv message">
-                        <input type="text" name="message" value="" required id="message">
-                        <label for="firstname" class="label-name"><span class="content">Message</span></label>    
-                    </div>
-                    <div class="inputdiv recaptcha">
-                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                        <textarea type="text" name="message" value=""  class="field" required id="message" rows="10" placeholder="hold"></textarea>
+                        <label for="message" class="label-name"><span class="content">Message</span></label>    
                     </div>
                     <div class="inputdiv">   
-                        <button type="submit" name="submit"  class="submit-btn" onclick="ValidateEmail(document.form1.message)">Send Message</button>
+                        <button type="submit"  class="submit-btn" onclick="ValidateEmail(document.form1.message)">Send Message</button>
                     </div>
-                        <div class="status">
-                    </div>
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" value="https://csicsi2000.github.io/Nella-weboldal/thanks.html">
                 </form>
             </div>
         </div>

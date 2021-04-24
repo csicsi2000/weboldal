@@ -5,7 +5,7 @@
     text-align: center;
     width: 100%;
     max-width: 30rem;
-    min-height: 100vh;
+    min-height: inherit;
 }
 
 form{
@@ -21,6 +21,11 @@ form{
     width: 100%;
     height: 2.5rem;
     margin-top: 1.5rem;
+    transition: 0.5s;
+}
+
+.inputdiv:focus-within{
+    transform: scale(1.05);
 }
 
 .flexbox > .inputdiv{
@@ -34,10 +39,18 @@ form{
 
 .label-name{
     position: absolute;
-    top:0px;
-    left: 0px;
+    left: 0;
+    top: 1rem;
     pointer-events: none;
-    color:black;
+    color:gray;
+    transform-origin: 0 0;
+    transition: 0.3s;
+}
+
+.field:focus + .label-name, 
+.field:not(:placeholder-shown) + .label-name{
+    transform: translateY(-1.3rem)  scale(0.9);
+
 }
 
 .form label::after{
@@ -45,16 +58,12 @@ form{
     position: absolute;
     height: 100%;
     width: 100%;
-    height: 100%;
-    width: 100%;
 }
 
-input{
+
+input, textarea{
     display: block;
     width: 100%;  
-}
-
-input{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -63,6 +72,17 @@ input{
     border: none;
     border-bottom: 2px solid gray;
     bottom: 0px;
+    transition: 0.5s;
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: transparent;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border-color: rgb(214, 132, 8);
 }
 
 .flexbox{
@@ -77,9 +97,11 @@ input{
     display: inline-block;
 }
 
-#message, .message{
-    height: 5rem;
-    vertical-align: top;
+.message{
+    height: 10rem;
+}
+#message{
+    height: 9rem;
 }
 
 #message::placeholder{
@@ -113,6 +135,7 @@ input{
 .submit-btn:hover{
     background-color: rgb(255, 224, 179);
     border-radius: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .status{
@@ -121,4 +144,9 @@ input{
 
 .status span{
     color: red;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 2rem;
 }

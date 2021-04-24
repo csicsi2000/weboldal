@@ -23,6 +23,7 @@ img{
 
 .afterNav{
     margin-top: 3rem;
+    min-height: 100vh;
 }
 
 .js-loading *,
@@ -181,6 +182,7 @@ img{
 
     .afterNav{
         margin-top: 3rem;
+        min-height: 150vh;
     }
     .navigations{
         width: 100%;
