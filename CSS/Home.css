@@ -15,7 +15,7 @@
     padding-top: 4rem;
     height: 10rem;
     width: auto;
-    animation: fill 0.5s ease forwards 2s;
+    animation: fill 0.5s ease forwards 2.7s;
 }
 
 @keyframes fill{

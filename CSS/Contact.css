@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .contact-form{
     margin: auto;
     padding: 2vw;
@@ -146,6 +148,6 @@ input:focus, textarea:focus{
 }
 
 h2{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Open Sans', sans-serif;
     margin-top: 2rem;
 }
