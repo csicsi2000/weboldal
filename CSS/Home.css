@@ -100,7 +100,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: auto;
-    margin-top: 3rem;
 }
 
 .felirat{
@@ -175,7 +174,6 @@
     .container{
         background-image: url(../Images/falMellettiCompressed.jpg);
         background-position: top left;
-        margin-top: 3vh;
     }
 
     .nev{

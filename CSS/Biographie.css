@@ -5,10 +5,10 @@
 }
 
 p{
-    margin: 2rem;
+    margin: 3rem;
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.8rem;
-    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .flex-container-column{
@@ -17,11 +17,11 @@ p{
 }
 .flex-container{
     margin: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     width: 80%;
-    min-height: 40vh;
+    min-height: 20vh;
     
 }
 
@@ -92,7 +92,7 @@ p{
     position: absolute;
     grid-column: 1/1;
     width: 25vw;
-    max-width: 55%;
+    max-width: 50%;
     background: #fff;
     padding: 3%;
     box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
@@ -159,7 +159,7 @@ p{
 .download{
     background-color: white;
     height: 3rem;
-    width: 10rem;
+    width: 15rem;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
     min-width: 150px;
@@ -173,7 +173,7 @@ p{
 }
 @media screen and (max-width: 1400px) and (orientation: landscape){
     p{
-        margin: 0px;
+        margin:1.2rem;
     }
 
     .flex-container{
