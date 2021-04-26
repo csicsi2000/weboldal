@@ -4,6 +4,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <meta charset="utf-8" lang="en" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Nella Balog's Gallery" />
         <link rel="stylesheet" type="text/css" href="CSS/navbar.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/Gallery.css"/>
         <title>Balog Nella - Gallery</title>
@@ -15,12 +16,115 @@
         <div id="nav-placeholder"></div>
         <div class="afterNav">
             <div class="studio">
+                <h3>Photos by JuliArt</h3>
                 <div class="flex-container">
-                    <div class="pictures">  
-                        
+                    <div class="column">  
+                        <img  class="small" alt="Juliart Photostudio pictures of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/allo.jpg" onclick="onClick(this)">
+                        <img  class="small" alt="Juliart Photostudio pictures of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/feherUlo.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">  
+                        <img class="small" alt="Juliart Photostudio pictures of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/allohat.jpg" onclick="onClick(this)">
+                        <img class="small" alt="Juliart Photostudio pictures of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/bordoUlo.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">
+                        <img class="small" alt="Juliart Photostudio picture of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/jobb.jpg" onclick="onClick(this)">
+                        <img class="small" alt="Juliart Photostudio picture of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/ulo.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">
+                        <img class="small" alt="Juliart Photostudio picture of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/bal.jpg" onclick="onClick(this)">
+                        <img class="small" alt="Juliart Photostudio picture of Nella Balog" src="/Images/Gallery/Compressed/JuliArt/balnez.jpg" onclick="onClick(this)">
                     </div>
                 </div>
             </div>
+            <div class="studio">
+                <h3>Photos by Scandinavian Cello School - Julia Severinsen</h3>
+                    <div class="flex-container">
+                    <div class="column">
+                        <img loading="lazy" class="small" alt="Julia Severinsen picture of Nella Balog" src="/Images/Gallery/Compressed/Scandinavian/tenger-min.jpg" onclick="onClick(this)">
+                        <img loading="lazy" class="small" alt="Julia Severinsen picture of Nella Balog" src="/Images/Gallery/Compressed/Scandinavian/feherFal-min.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">
+                        <img loading="lazy" class="small" alt="Julia Severinsen picture of Nella Balog" src="/Images/Gallery/Compressed/Scandinavian/jobbFal-min.jpg" onclick="onClick(this)">
+                    </div>
+                </div>  
+            </div>
+            <div class="studio">
+                <h3>Rutesheim</h3>
+                    <div class="flex-container">
+                    <div class="column">
+                        <img loading="lazy" class="small" alt="Rutesheim picture of Nella Balog" src="/Images/Gallery/Compressed/Rutesheim/nella.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">
+                        <img loading="lazy" class="small" alt="Rutesheim picture of Nella Balog with Wen-Sinn Yang" src="/Images/Gallery/Compressed/Rutesheim/wen.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">
+                        <img loading="lazy" class="small" alt="Rutesheim lesson"src="/Images/Gallery/Compressed/Rutesheim/ora.jpg" onclick="onClick(this)">
+                    </div>
+                    <div class="column">
+                        <img loading="lazy" class="small" alt="Rutesheim concert"src="/Images/Gallery/Compressed/Rutesheim/zenekar.jpg" onclick="onClick(this)">
+                    </div>
+                </div>  
+            </div>
         </div>
+        <div id="fullPicture" >
+            <span class="close">&times;</span>
+            <div class="imageContainer">
+              <img id="BigImage">
+            </div>
+        </div>
+          
+        <script>
+            document.getElementById("fullPicture").addEventListener('click',function(){
+                this.style.display='none';
+                enableScroll();
+                document.getElementById("navbar").style.top = "0px";
+
+            });
+
+            function onClick(element) {
+                document.getElementById("BigImage").src = element.src;
+                document.getElementById("fullPicture").style.display = "flex";
+                disableScroll();
+                document.getElementById("navbar").style.top = "-60px";
+            }
+
+            function preventDefault(e) {
+            e.preventDefault();
+            }
+
+            function preventDefaultForScrollKeys(e) {
+            if (keys[e.keyCode]) {
+                preventDefault(e);
+                return false;
+            }
+            }
+
+            // modern Chrome requires { passive: false } when adding event
+            var supportsPassive = false;
+            try {
+            window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+                get: function () { supportsPassive = true; } 
+            }));
+            } catch(e) {}
+
+            var wheelOpt = supportsPassive ? { passive: false } : false;
+            var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+            // call this to Disable
+            function disableScroll() {
+            window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+            window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+            window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+            window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+            }
+
+            // call this to Enable
+            function enableScroll() {
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+            window.removeEventListener('touchmove', preventDefault, wheelOpt);
+            window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+            }
+        </script>
     </body>
 </html>
