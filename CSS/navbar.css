@@ -24,6 +24,7 @@ img{
 .afterNav{
     margin-top: 3.3rem;
     min-height: 100vh;
+    max-width: 100vw;
 }
 
 .js-loading *,
