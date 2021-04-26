@@ -31,11 +31,17 @@ h3{
     padding: 0 4px;
 }
 
-
 .small {
     width: 100%;
     margin-top: 8px;
+    transition: 0.3s;
+    z-index: 0;
 }
+
+.small:hover{
+    transform: scale(1.05);
+}
+
 
 h3, .small{
     opacity: 0;
