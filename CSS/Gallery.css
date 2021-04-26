@@ -77,6 +77,10 @@ h3, .small{
     object-fit: contain;
 }
 
+.space{
+    min-height: 10rem;
+}
+
 
 @media screen and (max-width: 800px) {
     .column {
