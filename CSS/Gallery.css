@@ -36,6 +36,7 @@ h3{
     margin-top: 8px;
     transition: 0.3s;
     z-index: 0;
+    vertical-align: middle;
 }
 
 .small:hover{
@@ -92,6 +93,9 @@ h3, .small{
     .column {
       flex: 50%;
       max-width: 50%;
+    }
+    .small:hover{
+        transform: scale(1.03);
     }
 }
 
