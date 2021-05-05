@@ -94,23 +94,24 @@ header{
 }
 
 #instagram{
-    background-image: url(../Images/instagram.svg);
     transition: 0.2s linear;
     margin-left: 1rem;
     margin-right: 2rem;
+    filter:brightness(0%);
 }
 
 #instagram:hover{
-    background-image: url(../Images/instagramC2.svg);
+    filter: brightness(100%);
 }
 
 #youtube{
-    background-image: url(..//Images/youtube.svg);
+    background-image: url(..//Images/youtubeC.svg);
     transition: 0.2s linear;
+    filter: grayscale(100%) contrast(2);;
 }
 
 #youtube:hover{
-    background-image: url(../Images/youtubeC.svg);
+    filter: grayscale(0%);
 }
 
 a{
