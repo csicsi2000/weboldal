@@ -158,6 +158,7 @@ img{
     max-height: 55px;   
     max-width: 100vw; 
     height: 5rem;
+    background-color:   var(--background);
 }
 
 @keyframes slideInNav {
@@ -250,10 +251,6 @@ img{
         transition: 0.5s ease-in;
         z-index: 10;
         justify-content: center;
-    }
-
-    .afterNav{
-        margin-top: 6vh;
     }
 
     .navigations > li{

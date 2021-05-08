@@ -9,6 +9,10 @@
     max-width: 30rem;
     min-height: inherit;
     animation: opacity 1s linear;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 
 @keyframes opacity{
@@ -102,7 +106,9 @@ input:focus, textarea:focus{
     height: 2.5rem;
     margin-top: 2rem;
 }
-
+.center{
+    transform: translateY(-7%);
+}
 .oneline{
     width: 100%;
     flex-basis: 50%; 
@@ -132,11 +138,14 @@ input:focus, textarea:focus{
     padding: auto;
 }
 
+.submitDiv{
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
 .submit-btn{
     width: 40%;
     margin: auto;
-    position: absolute;
-    transform: translate(-50%, 50%);
     min-height: 30px;
     height: 3rem;
     background-color: blanchedalmond;
@@ -159,5 +168,5 @@ input:focus, textarea:focus{
 
 h2{
     font-family: 'Open Sans', sans-serif;
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
